@@ -11,7 +11,8 @@ import PredictionScreen from './screens/PredictionScreen';
 import ChatScreen       from './screens/ChatScreen';
 import AlertesScreen    from './screens/AlertesScreen';
 import FertilizerScreen from './screens/FertilizerScreen';
-
+import StorageScreen    from './screens/StorageScreen';
+ 
 const Tab       = createBottomTabNavigator();
 const Stack     = createNativeStackNavigator();
 const RootStack = createNativeStackNavigator();
@@ -68,6 +69,17 @@ function IconBell({ color }) {
         stroke={color} strokeWidth="1.8" fill="none" strokeLinejoin="round"/>
       <Path d="M13.73 21a2 2 0 0 1-3.46 0"
         stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+    </Svg>
+  );
+}
+
+function IconTrend({ color }) {
+  return (
+    <Svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <Path d="M3 17l5-5 4 4 7-8" stroke={color} strokeWidth="1.8"
+        strokeLinecap="round" strokeLinejoin="round"/>
+      <Path d="M15 6h4v4" stroke={color} strokeWidth="1.8"
+        strokeLinecap="round" strokeLinejoin="round"/>
     </Svg>
   );
 }
@@ -158,6 +170,15 @@ function MainTabs() {
             <TabIcon Icon={IconFlask} color={color} focused={focused} />,
         }}
       />
+<Tab.Screen
+  name="Marche"
+  component={StorageScreen}
+  options={{
+    title: 'Marché',
+    tabBarIcon: ({ color, focused }) =>
+      <TabIcon Icon={IconTrend} color={color} focused={focused} />,
+  }}
+/>
       <Tab.Screen
         name="Chat IA"
         component={ChatScreen}

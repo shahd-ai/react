@@ -1,0 +1,1166 @@
+{
+  "version": "v6",
+  "feature_cols": [
+    "year",
+    "month",
+    "week_of_year",
+    "region_enc",
+    "lag_1",
+    "lag_3",
+    "lag_7",
+    "lag_14",
+    "lag_21",
+    "lag_30",
+    "ma_7",
+    "std_7",
+    "ma_14",
+    "std_14",
+    "ma_30",
+    "std_30",
+    "ewm_7",
+    "ewm_14",
+    "ewm_30",
+    "momentum_3",
+    "momentum_7",
+    "momentum_14",
+    "momentum_accel",
+    "price_ratio_ma7",
+    "price_ratio_ma14",
+    "price_ratio_ma30",
+    "price_zscore_30",
+    "supply_stress",
+    "annual_ma",
+    "price_vs_annual",
+    "range_ratio_14",
+    "week",
+    "doy",
+    "sin_doy_1",
+    "cos_doy_1",
+    "sin_doy_2",
+    "cos_doy_2",
+    "sin_week",
+    "cos_week",
+    "season_enc"
+  ],
+  "horizons": [
+    3,
+    7,
+    14
+  ],
+  "main_horizon": 7,
+  "products": [
+    "abricot",
+    "ail",
+    "amande_vert",
+    "artichaut",
+    "ble",
+    "carotte",
+    "chou",
+    "citron",
+    "concombre",
+    "courgette",
+    "datte",
+    "feve",
+    "figue",
+    "fraise",
+    "mandarine",
+    "melon",
+    "oignon",
+    "olive",
+    "orange",
+    "orge",
+    "pasteque",
+    "peche",
+    "petits_pois",
+    "piment",
+    "poire",
+    "pomme",
+    "raisin",
+    "thomson",
+    "tomate"
+  ],
+  "region_classes": [
+    "Bizerte",
+    "Gabes",
+    "Gafsa",
+    "Kairouan",
+    "Nabeul",
+    "Sfax",
+    "Sousse",
+    "Tunis"
+  ],
+  "products_meta": {
+    "abricot": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.003,
+      "max_storage_days": 7,
+      "fragility": 0.8,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.4773,
+          "MAPE": 11.4,
+          "coverage": 72.2
+        },
+        "h7": {
+          "MAE": 0.7665,
+          "MAPE": 18.01,
+          "coverage": 76.4
+        }
+      }
+    },
+    "ail": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0005,
+      "max_storage_days": 180,
+      "fragility": 0.05,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.5607,
+          "MAPE": 17.03,
+          "coverage": 70.5
+        },
+        "h7": {
+          "MAE": 0.5538,
+          "MAPE": 16.69,
+          "coverage": 67.2
+        },
+        "h14": {
+          "MAE": 0.5449,
+          "MAPE": 16.59,
+          "coverage": 68.7
+        }
+      }
+    },
+    "amande_vert": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0008,
+      "max_storage_days": 90,
+      "fragility": 0.1,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2538,
+          "MAPE": 8.51,
+          "coverage": 0.0
+        },
+        "h7": {
+          "MAE": 0.3093,
+          "MAPE": 10.35,
+          "coverage": 0.0
+        },
+        "h14": {
+          "MAE": 0.5283,
+          "MAPE": 17.61,
+          "coverage": 0.1
+        }
+      }
+    },
+    "artichaut": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.002,
+      "max_storage_days": 10,
+      "fragility": 0.5,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2683,
+          "MAPE": 14.43,
+          "coverage": 76.9
+        },
+        "h7": {
+          "MAE": 0.2757,
+          "MAPE": 14.69,
+          "coverage": 76.3
+        }
+      }
+    },
+    "ble": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0002,
+      "max_storage_days": 365,
+      "fragility": 0.01,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.6183,
+          "MAPE": 44.29,
+          "coverage": 54.3
+        },
+        "h7": {
+          "MAE": 0.7351,
+          "MAPE": 52.38,
+          "coverage": 57.9
+        },
+        "h14": {
+          "MAE": 1.0818,
+          "MAPE": 76.59,
+          "coverage": 64.1
+        }
+      }
+    },
+    "carotte": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.001,
+      "max_storage_days": 30,
+      "fragility": 0.2,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.066,
+          "MAPE": 6.98,
+          "coverage": 45.4
+        },
+        "h7": {
+          "MAE": 0.0624,
+          "MAPE": 6.67,
+          "coverage": 37.9
+        },
+        "h14": {
+          "MAE": 0.0666,
+          "MAPE": 7.11,
+          "coverage": 49.6
+        }
+      }
+    },
+    "chou": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0015,
+      "max_storage_days": 14,
+      "fragility": 0.4,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.0845,
+          "MAPE": 10.04,
+          "coverage": 25.5
+        },
+        "h7": {
+          "MAE": 0.0672,
+          "MAPE": 7.98,
+          "coverage": 27.2
+        },
+        "h14": {
+          "MAE": 0.0748,
+          "MAPE": 8.69,
+          "coverage": 30.9
+        }
+      }
+    },
+    "citron": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0008,
+      "max_storage_days": 21,
+      "fragility": 0.2,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1331,
+          "MAPE": 7.15,
+          "coverage": 31.6
+        },
+        "h7": {
+          "MAE": 0.151,
+          "MAPE": 7.85,
+          "coverage": 24.8
+        },
+        "h14": {
+          "MAE": 0.144,
+          "MAPE": 7.57,
+          "coverage": 35.1
+        }
+      }
+    },
+    "concombre": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.002,
+      "max_storage_days": 7,
+      "fragility": 0.7,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.4893,
+          "MAPE": 37.73,
+          "coverage": 69.8
+        },
+        "h7": {
+          "MAE": 0.4973,
+          "MAPE": 35.91,
+          "coverage": 65.6
+        }
+      }
+    },
+    "courgette": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.0018,
+      "max_storage_days": 7,
+      "fragility": 0.7,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2189,
+          "MAPE": 27.3,
+          "coverage": 67.3
+        },
+        "h7": {
+          "MAE": 0.2057,
+          "MAPE": 28.1,
+          "coverage": 68.4
+        }
+      }
+    },
+    "datte": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0003,
+      "max_storage_days": 180,
+      "fragility": 0.05,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.9896,
+          "MAPE": 21.07,
+          "coverage": 56.2
+        },
+        "h7": {
+          "MAE": 0.783,
+          "MAPE": 16.68,
+          "coverage": 52.9
+        },
+        "h14": {
+          "MAE": 0.8082,
+          "MAPE": 17.1,
+          "coverage": 49.4
+        }
+      }
+    },
+    "feve": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0012,
+      "max_storage_days": 14,
+      "fragility": 0.4,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.153,
+          "MAPE": 9.68,
+          "coverage": 80.9
+        },
+        "h7": {
+          "MAE": 0.1434,
+          "MAPE": 9.24,
+          "coverage": 77.0
+        },
+        "h14": {
+          "MAE": 0.1455,
+          "MAPE": 9.17,
+          "coverage": 76.0
+        }
+      }
+    },
+    "figue": {
+      "horizons": [
+        3
+      ],
+      "storage_cost_per_day": 0.0025,
+      "max_storage_days": 5,
+      "fragility": 0.9,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2848,
+          "MAPE": 7.38,
+          "coverage": 67.2
+        }
+      }
+    },
+    "fraise": {
+      "horizons": [
+        3
+      ],
+      "storage_cost_per_day": 0.0035,
+      "max_storage_days": 3,
+      "fragility": 1.0,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.5397,
+          "MAPE": 13.93,
+          "coverage": 79.8
+        }
+      }
+    },
+    "mandarine": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0008,
+      "max_storage_days": 14,
+      "fragility": 0.3,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1979,
+          "MAPE": 10.87,
+          "coverage": 44.0
+        },
+        "h7": {
+          "MAE": 0.292,
+          "MAPE": 16.08,
+          "coverage": 44.0
+        },
+        "h14": {
+          "MAE": 0.3404,
+          "MAPE": 18.14,
+          "coverage": 62.4
+        }
+      }
+    },
+    "melon": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.0012,
+      "max_storage_days": 10,
+      "fragility": 0.5,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1348,
+          "MAPE": 8.06,
+          "coverage": 69.6
+        },
+        "h7": {
+          "MAE": 0.173,
+          "MAPE": 10.22,
+          "coverage": 69.6
+        }
+      }
+    },
+    "oignon": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0003,
+      "max_storage_days": 90,
+      "fragility": 0.1,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.107,
+          "MAPE": 13.9,
+          "coverage": 95.5
+        },
+        "h7": {
+          "MAE": 0.1045,
+          "MAPE": 13.62,
+          "coverage": 93.4
+        },
+        "h14": {
+          "MAE": 0.1171,
+          "MAPE": 16.36,
+          "coverage": 85.4
+        }
+      }
+    },
+    "olive": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0005,
+      "max_storage_days": 60,
+      "fragility": 0.1,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.3125,
+          "MAPE": 15.94,
+          "coverage": 73.8
+        },
+        "h7": {
+          "MAE": 0.3215,
+          "MAPE": 16.51,
+          "coverage": 76.0
+        },
+        "h14": {
+          "MAE": 0.3629,
+          "MAPE": 19.17,
+          "coverage": 77.4
+        }
+      }
+    },
+    "orange": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0007,
+      "max_storage_days": 21,
+      "fragility": 0.2,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2556,
+          "MAPE": 12.89,
+          "coverage": 73.6
+        },
+        "h7": {
+          "MAE": 0.2352,
+          "MAPE": 12.3,
+          "coverage": 72.3
+        },
+        "h14": {
+          "MAE": 0.2278,
+          "MAPE": 12.38,
+          "coverage": 79.5
+        }
+      }
+    },
+    "orge": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0002,
+      "max_storage_days": 365,
+      "fragility": 0.01,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.234,
+          "MAPE": 33.91,
+          "coverage": 51.3
+        },
+        "h7": {
+          "MAE": 0.1435,
+          "MAPE": 20.87,
+          "coverage": 60.2
+        },
+        "h14": {
+          "MAE": 0.2714,
+          "MAPE": 38.44,
+          "coverage": 64.7
+        }
+      }
+    },
+    "pasteque": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.001,
+      "max_storage_days": 10,
+      "fragility": 0.4,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1017,
+          "MAPE": 10.75,
+          "coverage": 32.5
+        },
+        "h7": {
+          "MAE": 0.109,
+          "MAPE": 12.34,
+          "coverage": 50.0
+        }
+      }
+    },
+    "peche": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.0025,
+      "max_storage_days": 7,
+      "fragility": 0.8,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2001,
+          "MAPE": 11.63,
+          "coverage": 59.7
+        },
+        "h7": {
+          "MAE": 0.1697,
+          "MAPE": 9.29,
+          "coverage": 47.2
+        }
+      }
+    },
+    "petits_pois": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.0015,
+      "max_storage_days": 10,
+      "fragility": 0.5,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2011,
+          "MAPE": 9.03,
+          "coverage": 52.7
+        },
+        "h7": {
+          "MAE": 0.1994,
+          "MAPE": 8.98,
+          "coverage": 51.6
+        }
+      }
+    },
+    "piment": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.0012,
+      "max_storage_days": 10,
+      "fragility": 0.3,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.2374,
+          "MAPE": 17.26,
+          "coverage": 92.4
+        },
+        "h7": {
+          "MAE": 0.2933,
+          "MAPE": 22.11,
+          "coverage": 91.0
+        }
+      }
+    },
+    "poire": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0008,
+      "max_storage_days": 21,
+      "fragility": 0.3,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1917,
+          "MAPE": 8.63,
+          "coverage": 68.7
+        },
+        "h7": {
+          "MAE": 0.1967,
+          "MAPE": 8.72,
+          "coverage": 66.5
+        },
+        "h14": {
+          "MAE": 0.1972,
+          "MAPE": 8.89,
+          "coverage": 72.7
+        }
+      }
+    },
+    "pomme": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0005,
+      "max_storage_days": 60,
+      "fragility": 0.2,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1659,
+          "MAPE": 13.27,
+          "coverage": 84.9
+        },
+        "h7": {
+          "MAE": 0.1693,
+          "MAPE": 13.42,
+          "coverage": 80.1
+        },
+        "h14": {
+          "MAE": 0.1638,
+          "MAPE": 12.89,
+          "coverage": 74.9
+        }
+      }
+    },
+    "raisin": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.0015,
+      "max_storage_days": 7,
+      "fragility": 0.5,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1017,
+          "MAPE": 8.0,
+          "coverage": 66.4
+        },
+        "h7": {
+          "MAE": 0.1021,
+          "MAPE": 8.29,
+          "coverage": 77.6
+        }
+      }
+    },
+    "thomson": {
+      "horizons": [
+        3,
+        7,
+        14
+      ],
+      "storage_cost_per_day": 0.0008,
+      "max_storage_days": 30,
+      "fragility": 0.3,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1686,
+          "MAPE": 9.14,
+          "coverage": 28.5
+        },
+        "h7": {
+          "MAE": 0.0531,
+          "MAPE": 2.83,
+          "coverage": 8.4
+        },
+        "h14": {
+          "MAE": 0.0568,
+          "MAPE": 3.11,
+          "coverage": 0.0
+        }
+      }
+    },
+    "tomate": {
+      "horizons": [
+        3,
+        7
+      ],
+      "storage_cost_per_day": 0.001,
+      "max_storage_days": 7,
+      "fragility": 0.7,
+      "metrics": {
+        "model": "stacking",
+        "h3": {
+          "MAE": 0.1215,
+          "MAPE": 34.14,
+          "coverage": 77.8
+        },
+        "h7": {
+          "MAE": 0.1262,
+          "MAPE": 32.95,
+          "coverage": 76.4
+        }
+      }
+    }
+  },
+  "backtest_summary": [
+    {
+      "Produit": "ail",
+      "MAE_h7": 0.5538,
+      "MAPE%": 16.69,
+      "Cov%": 67.2,
+      "Store%": 52.7,
+      "Win rate%": 88.0,
+      "Avg Conf%": 71.2,
+      "Profit ML": 350.971,
+      "Profit heur.": 30.683,
+      "Regret moy.": 0.2168
+    },
+    {
+      "Produit": "olive",
+      "MAE_h7": 0.3215,
+      "MAPE%": 16.51,
+      "Cov%": 76.0,
+      "Store%": 75.6,
+      "Win rate%": 75.3,
+      "Avg Conf%": 70.6,
+      "Profit ML": 171.354,
+      "Profit heur.": -4.278,
+      "Regret moy.": 0.1423
+    },
+    {
+      "Produit": "datte",
+      "MAE_h7": 0.783,
+      "MAPE%": 16.68,
+      "Cov%": 52.9,
+      "Store%": 99.0,
+      "Win rate%": 59.2,
+      "Avg Conf%": 88.1,
+      "Profit ML": 139.656,
+      "Profit heur.": 7.121,
+      "Regret moy.": 0.1658
+    },
+    {
+      "Produit": "concombre",
+      "MAE_h7": 0.4973,
+      "MAPE%": 35.91,
+      "Cov%": 65.6,
+      "Store%": 54.6,
+      "Win rate%": 72.2,
+      "Avg Conf%": 47.4,
+      "Profit ML": 118.095,
+      "Profit heur.": 30.436,
+      "Regret moy.": 0.2368
+    },
+    {
+      "Produit": "artichaut",
+      "MAE_h7": 0.2757,
+      "MAPE%": 14.69,
+      "Cov%": 76.3,
+      "Store%": 62.8,
+      "Win rate%": 66.7,
+      "Avg Conf%": 77.7,
+      "Profit ML": 94.974,
+      "Profit heur.": 5.304,
+      "Regret moy.": 0.0912
+    },
+    {
+      "Produit": "orange",
+      "MAE_h7": 0.2352,
+      "MAPE%": 12.3,
+      "Cov%": 72.3,
+      "Store%": 64.0,
+      "Win rate%": 84.0,
+      "Avg Conf%": 77.3,
+      "Profit ML": 93.528,
+      "Profit heur.": -7.86,
+      "Regret moy.": 0.1204
+    },
+    {
+      "Produit": "piment",
+      "MAE_h7": 0.2933,
+      "MAPE%": 22.11,
+      "Cov%": 91.0,
+      "Store%": 71.7,
+      "Win rate%": 71.2,
+      "Avg Conf%": 67.1,
+      "Profit ML": 86.772,
+      "Profit heur.": 17.308,
+      "Regret moy.": 0.0775
+    },
+    {
+      "Produit": "poire",
+      "MAE_h7": 0.1967,
+      "MAPE%": 8.72,
+      "Cov%": 66.5,
+      "Store%": 75.2,
+      "Win rate%": 75.0,
+      "Avg Conf%": 84.7,
+      "Profit ML": 78.891,
+      "Profit heur.": -15.079,
+      "Regret moy.": 0.085
+    },
+    {
+      "Produit": "oignon",
+      "MAE_h7": 0.1045,
+      "MAPE%": 13.62,
+      "Cov%": 93.4,
+      "Store%": 67.9,
+      "Win rate%": 81.0,
+      "Avg Conf%": 62.1,
+      "Profit ML": 70.514,
+      "Profit heur.": 4.888,
+      "Regret moy.": 0.0368
+    },
+    {
+      "Produit": "courgette",
+      "MAE_h7": 0.2057,
+      "MAPE%": 28.1,
+      "Cov%": 68.4,
+      "Store%": 49.8,
+      "Win rate%": 82.5,
+      "Avg Conf%": 58.7,
+      "Profit ML": 54.961,
+      "Profit heur.": -4.038,
+      "Regret moy.": 0.0868
+    },
+    {
+      "Produit": "feve",
+      "MAE_h7": 0.1434,
+      "MAPE%": 9.24,
+      "Cov%": 77.0,
+      "Store%": 50.8,
+      "Win rate%": 83.4,
+      "Avg Conf%": 79.6,
+      "Profit ML": 51.463,
+      "Profit heur.": -11.286,
+      "Regret moy.": 0.0806
+    },
+    {
+      "Produit": "petits_pois",
+      "MAE_h7": 0.1994,
+      "MAPE%": 8.98,
+      "Cov%": 51.6,
+      "Store%": 43.8,
+      "Win rate%": 74.7,
+      "Avg Conf%": 87.6,
+      "Profit ML": 41.146,
+      "Profit heur.": -13.959,
+      "Regret moy.": 0.082
+    },
+    {
+      "Produit": "citron",
+      "MAE_h7": 0.151,
+      "MAPE%": 7.85,
+      "Cov%": 24.8,
+      "Store%": 48.1,
+      "Win rate%": 76.4,
+      "Avg Conf%": 92.5,
+      "Profit ML": 38.084,
+      "Profit heur.": -3.767,
+      "Regret moy.": 0.0862
+    },
+    {
+      "Produit": "pomme",
+      "MAE_h7": 0.1693,
+      "MAPE%": 13.42,
+      "Cov%": 80.1,
+      "Store%": 24.3,
+      "Win rate%": 94.8,
+      "Avg Conf%": 80.2,
+      "Profit ML": 33.825,
+      "Profit heur.": -9.365,
+      "Regret moy.": 0.1068
+    },
+    {
+      "Produit": "tomate",
+      "MAE_h7": 0.1262,
+      "MAPE%": 32.95,
+      "Cov%": 76.4,
+      "Store%": 65.2,
+      "Win rate%": 65.2,
+      "Avg Conf%": 46.6,
+      "Profit ML": 27.025,
+      "Profit heur.": 8.035,
+      "Regret moy.": 0.0491
+    },
+    {
+      "Produit": "mandarine",
+      "MAE_h7": 0.292,
+      "MAPE%": 16.08,
+      "Cov%": 44.0,
+      "Store%": 97.2,
+      "Win rate%": 63.4,
+      "Avg Conf%": 89.5,
+      "Profit ML": 18.097,
+      "Profit heur.": -1.267,
+      "Regret moy.": 0.0943
+    },
+    {
+      "Produit": "carotte",
+      "MAE_h7": 0.0624,
+      "MAPE%": 6.67,
+      "Cov%": 37.9,
+      "Store%": 64.2,
+      "Win rate%": 67.0,
+      "Avg Conf%": 91.4,
+      "Profit ML": 18.065,
+      "Profit heur.": -3.072,
+      "Regret moy.": 0.0368
+    },
+    {
+      "Produit": "melon",
+      "MAE_h7": 0.173,
+      "MAPE%": 10.22,
+      "Cov%": 69.6,
+      "Store%": 53.1,
+      "Win rate%": 86.4,
+      "Avg Conf%": 81.4,
+      "Profit ML": 15.151,
+      "Profit heur.": -13.819,
+      "Regret moy.": 0.0488
+    },
+    {
+      "Produit": "chou",
+      "MAE_h7": 0.0672,
+      "MAPE%": 7.98,
+      "Cov%": 27.2,
+      "Store%": 26.5,
+      "Win rate%": 85.2,
+      "Avg Conf%": 89.5,
+      "Profit ML": 9.867,
+      "Profit heur.": -3.825,
+      "Regret moy.": 0.0361
+    },
+    {
+      "Produit": "figue",
+      "MAE_h7": NaN,
+      "MAPE%": NaN,
+      "Cov%": NaN,
+      "Store%": 53.0,
+      "Win rate%": 70.4,
+      "Avg Conf%": 85.2,
+      "Profit ML": 9.482,
+      "Profit heur.": -1.012,
+      "Regret moy.": 0.0349
+    },
+    {
+      "Produit": "orge",
+      "MAE_h7": 0.1435,
+      "MAPE%": 20.87,
+      "Cov%": 60.2,
+      "Store%": 100.0,
+      "Win rate%": 55.4,
+      "Avg Conf%": 91.8,
+      "Profit ML": 9.363,
+      "Profit heur.": 0.48,
+      "Regret moy.": 0.0217
+    },
+    {
+      "Produit": "ble",
+      "MAE_h7": 0.7351,
+      "MAPE%": 52.38,
+      "Cov%": 57.9,
+      "Store%": 100.0,
+      "Win rate%": 53.2,
+      "Avg Conf%": 91.8,
+      "Profit ML": 8.734,
+      "Profit heur.": 3.692,
+      "Regret moy.": 0.0246
+    },
+    {
+      "Produit": "pasteque",
+      "MAE_h7": 0.109,
+      "MAPE%": 12.34,
+      "Cov%": 50.0,
+      "Store%": 63.9,
+      "Win rate%": 65.3,
+      "Avg Conf%": 91.5,
+      "Profit ML": 5.993,
+      "Profit heur.": -6.626,
+      "Regret moy.": 0.0321
+    },
+    {
+      "Produit": "abricot",
+      "MAE_h7": 0.7665,
+      "MAPE%": 18.01,
+      "Cov%": 76.4,
+      "Store%": 98.6,
+      "Win rate%": 56.3,
+      "Avg Conf%": 88.2,
+      "Profit ML": 5.64,
+      "Profit heur.": -0.555,
+      "Regret moy.": 0.1567
+    },
+    {
+      "Produit": "raisin",
+      "MAE_h7": 0.1021,
+      "MAPE%": 8.29,
+      "Cov%": 77.6,
+      "Store%": 64.9,
+      "Win rate%": 72.4,
+      "Avg Conf%": 80.9,
+      "Profit ML": 5.37,
+      "Profit heur.": -2.472,
+      "Regret moy.": 0.035
+    },
+    {
+      "Produit": "peche",
+      "MAE_h7": 0.1697,
+      "MAPE%": 9.29,
+      "Cov%": 47.2,
+      "Store%": 81.9,
+      "Win rate%": 66.1,
+      "Avg Conf%": 85.9,
+      "Profit ML": 4.019,
+      "Profit heur.": 2.513,
+      "Regret moy.": 0.0858
+    },
+    {
+      "Produit": "fraise",
+      "MAE_h7": NaN,
+      "MAPE%": NaN,
+      "Cov%": NaN,
+      "Store%": 0.0,
+      "Win rate%": 0.0,
+      "Avg Conf%": 0.0,
+      "Profit ML": 0.0,
+      "Profit heur.": -21.663,
+      "Regret moy.": 0.3085
+    },
+    {
+      "Produit": "thomson",
+      "MAE_h7": 0.0531,
+      "MAPE%": 2.83,
+      "Cov%": 8.4,
+      "Store%": 59.4,
+      "Win rate%": 3.3,
+      "Avg Conf%": 80.3,
+      "Profit ML": -16.449,
+      "Profit heur.": -0.627,
+      "Regret moy.": 0.0001
+    },
+    {
+      "Produit": "amande_vert",
+      "MAE_h7": 0.3093,
+      "MAPE%": 10.35,
+      "Cov%": 0.0,
+      "Store%": 100.0,
+      "Win rate%": 2.0,
+      "Avg Conf%": 80.7,
+      "Profit ML": -44.056,
+      "Profit heur.": -0.627,
+      "Regret moy.": 0.0001
+    }
+  ]
+}

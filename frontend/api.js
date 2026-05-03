@@ -2,7 +2,7 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const API_URL = 'http://localhost:8000';
-
+//const API_URL = " https://tinderbox-glamour-crave.ngrok-free.dev";
 const api = axios.create({
   baseURL: API_URL,
   timeout: 30000,
@@ -65,3 +65,15 @@ export const chat = async (messages) => {
 };
 
 export default api;
+
+
+// ── Storage Decision ──────────────────────────────────────────────────────────
+export const getStorageProducts = async () => {
+  const res = await api.get('/storage/products');
+  return res.data.products;
+};
+
+export const predictStorage = async (data) => {
+  const res = await api.post('/storage/predict', data);
+  return res.data;
+};
